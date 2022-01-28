@@ -1,0 +1,252 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--Place this meta tag before tite.-->
+
+<title>MegaMillion | Lottery |Numbers Check</title>
+<meta name="Description" content="How lucky are you MegaMillions numbers, Plug them in and see how often, and in what combinations your numbers have hit in past drawings. Are they lucky?"/>
+
+<meta name="Keywords" content=""/><!--Placee thes meta tags after title tag-->
+<meta name="ROBOTS" content="INDEX, FOLLOW" /><!--This tag may not be needed.****-->
+<meta name="Publisher" content=""/>
+<link type="text/css" rel="stylesheet" href="css/reset.css"/>
+<link type="text/css" rel="stylesheet" href="css/lottoCss.css"/>
+<link type="text/css" rel="stylesheet" href="css/lottoInfo.css"/>
+<!---->
+<link type="text/css" rel="stylesheet" href="css/numberDisplay.css"/>
+<link type="text/css" rel="stylesheet" href="css/stylesMM.css"/><!--***Change to stylesMM when created.-->
+<!--Place any style sheet links before script tag.-->
+<script type="text/javascript"  src="js/jquery-1.9.1.min.js"></script><!--Alway include links to JQuery and .js file before using functions in those files and put Script tags last in the head section of web page.-->
+<script type ="text/javascript" src="js/MegaMilarray.js"></script>
+<script type ="text/javascript" src="js/userInput.js"></script> 
+<script type="text/javascript">
+	//var Numbers; May not be needed.
+	$(document).ready(function(){
+	//the document.ready function may not be needed with event handlers.
+	$('#submitBttn').click(function(){
+	runNumbers(75,15,2);
+	});//End submitBttn function
+	$('#last5Switch').click(function(){
+		$('#L5divTest ').slideToggle(300);
+		$('#last5Switch').toggle();
+		$('#test5Switch').toggle();
+	});//End click	
+	$('#test5Switch').click(function(){
+		$('#L5divTest ').slideToggle(300);
+		$('#last5Switch').toggle();
+		$('#test5Switch').toggle();
+		<!---->$(this).toggleClass('close');
+		});//End test5Switch click
+		$('#rightBar').click(function(){
+		$('#alertDialog').toggle();
+	});//End rightBar click	
+	});//End document ready function
+</script>
+</head>
+
+<body>
+  <div id="container" class ="clearfix">
+   <div id="docHeader" >
+   <form id="jackpotAmt" action="#">  <!--*This form will display jackpot amount-->
+            <h3 id="jackputHeader">Estimated Jackpot  $</h3><!--</span> ****Check to see if span is needed-->
+            <input type="text"  class ="jackpotNum"  value='1'readonly="readonly"/>
+            <input type="text"  class ="jackpotNum"  value='4' readonly="readonly"/>
+            <input type="text"  class ="jackpotNum"  value='9' readonly="readonly"/><span>,</span>            
+            <input type="text"  class ="jackpotNum"  value='0' readonly="readonly"/>
+            <input type="text"  class ="jackpotNum"  value='0' readonly="readonly"/>
+            <input type="text"  class ="jackpotNum"  value='0' readonly="readonly"/><span>,</span> 
+            <input type="text"  class ="jackpotNum"  value='0' readonly="readonly"/>
+            <input type="text" class ="jackpotNum"  value='0' readonly="readonly"/>
+            <input id ="lastNum" type="text"  class ="jackpotNum"  value='0' readonly="readonly"/>
+   </form>
+    <p id="welcome">Welcome to the the</p> <!--****Check if ID welcome is used in program-->
+	
+    <h1 id="header">MegaMillions Lottery numbers page</h1>
+  
+    <div id="anchors">
+      <a class="aLinks" href="index.html">Lucky Lotto Home</a>
+      <a class="aLinks" href="My_PowerBall.html">My Lucky Powerball</a>
+      <a class="aLinks" href="My_MegaMillions.html">My Lucky Mega Millions</a>
+      <a class="aLinks" href="Hot_Lotto.html">My Lucky Hot Lotto Sizzler</a>
+      <a class="aLinks" href="contact.html">Lucky You Contact Us</a>
+    </div><!--End anchors div-->
+  </div><!--End docHeader div-->
+  <div id ="leftSideBar">
+   &nbsp;
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- LeftSkyscraper -->
+      <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-8586743285993397"
+         data-ad-slot="1767374065"></ins>
+   <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+  </div><!--End left Side Bar div-->
+	<div id = "content" class ="clearfix" >  
+  <div id ="alertDialog">
+    <div id="topBar" class="clearfix">
+		<div id="rightBar" ><h3 id="rightBarH3">X</h3>&nbsp;&nbsp;<span>Close</span></div><!--End rightBar div-->
+      
+    </div><!--End topBar div-->
+    <div id="alertMessage">The values inputed where out of range or were non-numeric characters. Please enter correct values</div><!--End rightBar div-->
+  </div><!--End alertdialog div-->	
+    <div id="userNumbers">  
+<div id = "L5divTest">
+      <!--<form>--> 
+      <div id ="last5Form">
+      <div class="5num">Date&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numbers &nbsp;&nbsp;&nbsp;</div>
+      
+      <div class="5num">07/08/2014:&nbsp;14 25 27 48 49 MB = 09</div>
+      <div class="5num">07/04/2014:&nbsp;16 33 39 58 69 MB = 02</div>       
+      <div class="5num">07/01/2014:&nbsp;09 22 38 47 49 MB = 15</div>
+      <div class="5num">06/27/2014:&nbsp;15 29 31 46 64 MB = 10</div>
+      <div class="5num">06/24/2014:&nbsp;13 17 24 47 65 MB = 10</div>
+ 
+           
+      </div><!--End last5Form div-->  
+      <!-- </form> --> 
+    </div><!--End L5divTest-->
+    <div id="last5Switch" class="pSwitch">Last 5 drawings</div><!--Div will have click event to display last 5 numbers-->
+     <div id="test5Switch" class="pSwitch">+ Close</div><!--Div will have click event to display last 5 numbers-->	
+	
+	      <h2>Mega Millions number input </h2>
+      <p>The Mega Millions lottery is one of the two biggest Lottery games in United States. Tickets are 
+      sold in 43 states plus Washington D.C. and the U.S. Virgin Islands. The
+      Mega Millions lotter holds the record for biggest Jackpot in the United States with a whopping $656
+      million jackpot won on March 30,2012. Lottery fever reached a fever pitch with $414 million jackpot won on
+      March 18, 2014. </p>
+      
+      <p>If you are new to this Website or the Mega Millions Lottery game just remember these rules:</p>
+      <ul id="numbersLi">
+        <li>The first five numbers must be between 1 and 75</li>
+        <li>The Mega Millions number must be between 1 and 15</li>
+      </ul>
+           
+      <p> When you are ready, just plugs in yours numbers and press the "Submit" button</p>
+      <hr/><!--Test code to see how looks-->
+        <form id="input_Data" action="#"><!--User will input the six numbers for power ball.-->
+          <fieldset id="UserInput">
+            <input type="text"  id="first_num" class ="userNum1 userNum2"  />
+            <input type="text"  id="second_num" class ="userNum1 userNum2"   />
+            <input type="text"  id="third_num" class ="userNum1 userNum2"  />
+            <input type="text"  id="fourth_num" class ="userNum1 userNum2"  />
+            <input type="text"  id="fifth_num" class ="userNum1 userNum2"   />
+            <span>MB #</span>
+            <input type="text"  id="P1b" class ="BonusNum1"   /><!--****Consider changing P1b and PBNum1 to less specifid ID-->
+            <input type="button" value="Submit" id="submitBttn"/>
+          </fieldset>
+          </form> 
+        <div id="noteOnNumbers">
+          <p id="numNote"> A little bit of History:</p>
+          <p>Mega Millions used to be known was the Big Game. In 2002 the name changed to The Big Game Mega Millions. Now it's called Mega Millions.</p>
+          <p>Like the name, the Mega Millions lottery has undergone a few changes with the most recent changes going  into effect on October 19, 2013. These changes include:</p> 
+          <div class ="listDiv">
+           <ul>
+             <li>The top value  for the first five numbers (non Megaball) has increased from 50 to 75</li>
+             <li>The top value for the Megaball increased  from 25 to 46 but  as of October 19, 2013 it dropped down to 15.</li> 
+             <li>Matching the first five numbers will pay a cool $1 Million dollars.</li>
+             <li>In some states the payout for maching the first five  winning numbers can be as high as $5 millions if you purchace the bonus $1 Megaplier multiplier (say that 5 times fast) option. </li>
+             <li>The Megaplier offers up to 5 times jackpots and all cash prize ! Except the Mega Millions Jackpot. The Megaplier cut be purchased in all states except California(for now?). </li>
+             <li>The   MegaMilions jacktpot starts at $15 million dollars. With a guaranteed $5 million increase for the next drawing if there is no winning ticket.
+             </li>
+             </ul>
+        </div><!--End listDiv-->
+      </div> <!--End noteOnNumbes div-->
+          <p id="tryAgain"> Below are your results, if you have another set of numbers, just plug them in and try again.</p>
+    </div><!--End userNumbers div-->                    
+     <div id="userDisplay">
+     
+      <div id="oneNum" class="results">
+        <p class="userDisplayP">The numbers of times only one of your first five numbers hit:</p>
+        <form id="single" class="resultForms" action="#">
+        </form>
+      </div>     
+      <div id="oneBonusNum" class="results">
+        <p class="userDisplayP">The numbers of times when only your Mega Millions number hit:</p> 
+        <form id="singleBonus" class="resultForms" action="#">
+        </form>       
+      </div>
+     
+      <div id="twoNum" class="results">
+       <p class="userDisplayP">The numbers of times these two number combinations hit:</p>
+        <form id="double" class="resultForms" action="#">
+        </form>       
+      </div>
+     
+      <div id="twoBonusNum" class="results">
+       <p class="userDisplayP">The numbers of times your Mega Millions and one number hit:</p>
+        <form id="doubleBonus" class="resultForms" action="#">
+        </form>       
+      </div>
+       
+      <div id="threeNum" class="results">
+      <p class="userDisplayP">The numbers of times these three number combinations hit:</p>
+        <form id="triple" class="resultForms" action="#">
+        </form>        
+      </div>
+      
+      <div id="threeNumBonus" class="results">
+       <p class="userDisplayP">The numbers of times your Mega Millions and two numbers hit:</p>
+        <form id="tripleBonus" class="resultForms" action="#">
+        </form>       
+      </div>
+      
+      <div id="fourNum" class="results">
+       <p class="userDisplayP">The numbers of times these four number combinations hit:</p>
+        <form id="quad" class="resultForms" action="#">
+        </form>      
+      </div>
+      
+      <div id="fourNumBonus" class="results">
+        <p class="userDisplayP">The numbers of times your Mega Millions and three numbers hit:</p>
+        <form id="quadBonus" action="#">
+        </form>
+      </div>
+      
+      <div id="fiveNum" class="results">
+        <p class="userDisplayP">The numbers of times these five number combinations hit:</p>
+        <form id="penta" class="resultForms" action="#">
+        </form>
+      </div>
+      
+      <div id="fiveNumBonus" class="results">
+        <p class="userDisplayP">The numbers of times your Mega Millions and four numbers hit:</p>
+        <form id="pentaBonus" class="resultForms" action="#">
+        </form>
+      </div>
+      <div id="sixNumber">
+     <p class="userDisplayP">You numbers Hit the Jackpot at least one time!</p>
+        <form id="bigWinNumber" class="resultForms" action="#">
+        </form>
+      </div>
+    </div><!--End User display div-->
+    </div><!--end content div-->
+    <div id="rightSideBar">
+   &nbsp;
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <!-- rightSkyscraper -->
+      <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-8586743285993397"
+         data-ad-slot="1627773267"></ins>
+   <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+    </div><!--End right side bar-->
+    
+
+
+<div id="docFooter">
+    <div id="footerLink"><!--These links will fomated diffently -->
+    <a class="fLinks" href="index.html">Lucky Lotto Home</a>
+    <a class="fLinks" href="My_PowerBall.html">Lucky Powerball</a>
+    <a class="fLinks" href="My_MegaMillions.html">Lucky Mega Mllions</a>
+    <a class="fLinks" href="Hot_Lotto.html">Lucky Hot Lotto Sizzler</a>
+    <a class="fLinks" href="contact.html">Lucky You Contact Us</a>
+    
+    </div><!--End footerLink div-->
+</div><!--End docFooter div-->
+</div><!--End Container div-->
+</body>
+</html>

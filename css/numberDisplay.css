@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* This CSS file will styles the pages thay will display sorted numbers as output.*/
+/*In C: Drive */
+input, .userNum2, .BonusNum1 /*Page dependant only used on pages where lottery numbers are inputed.*/
+{
+  text-align:center;	
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding:5px;
+  margin-top:2px;
+  margin-left:2px;
+  width:25px;
+  color:blue; /****This code will pager specific and should be moved*/
+  
+}
+
+span
+{
+	margin-left:10px;
+}
+
+#submitBttn
+{
+	width:60px;
+}
+
+/* 
+#UserOutput, #numErrorCode, #letterErrorCode, #bonusNum,
+#noBonus, #Bonus, #nobonus_One_Number,#bonus_One_Number,*/
+ #tryAgain,#oneNum, #oneBonusNum,
+#twoNum, #twoBonusNum, #threeNum,#threeNumBonus, #fourNum,  #fourNumBonus, #fiveNum, #fiveNumBonus, #sixNumber   /*Check code for variable not in use*/
+#userDisplay, #letterErrorCode, #numErrorCode,#sixNumber, .userDisplayP
+{
+  display:none;
+ /* visibility:hidden;Page dependant*//**** Code may not be needed*/
+}
+
+#input_Data/*Page dependant only used on pages where lottery numbers are inputed.*/
+{
+	border-radius: 15px;
+	margin:4px;	
+	text-align:center;
+}
+#jackputHeader/*correct to jackpot*/
+{
+	display:inline;
+}
+#jackpotAmt
+{
+	float:right;
+	padding-right: 5px;
+	
+}
+
+
+.jackpotNum
+{
+	
+	text-align:center;	
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	padding:1px;
+	color:white;
+	background-color:black;
+	
+}
+.listDiv
+{
+	margin-left:20px;
+}
+#userNumbers
+{
+	border:none;
+}
+
+li, #numbersLi li, 
+{
+	padding-left:25px;
+	margin: 3px;
+		
+}
+
+.userDisplayP
+{
+text-indent:4px;
+margin: 4px;
+border:none;		
+}
+
+.resultForms
+{
+  margin:8px;
+  border-radius: 15px;
+  border: 1px double white;
+  padding-top: 2px;
+  padding-bottom:2px;
+}
+
+.results
+{
+	border:none;
+}    
+#alertDialog{
+	position:absolute;
+	border: 1px solid black;
+	border-radius:10px;
+	width:300px;
+	height:150px;
+	z-index:15;
+	top:230px;
+	left:163px;
+	text-align:center;
+	background-color:pink;
+	display:none;
+	cursor:pointer;
+
+	}
+	#topBar{
+	background-color:#c3e0ff;
+	padding:3px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom:double;
+	
+	}
+	#rightBarH3{
+	display:inline;	
+	
+	}
+	#rightBar{
+		float: right;
+	}
+	#alertMessage{
+	 clear:right;	
+	 margin: 20px auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	
+	}
+	
+
+/*.userNum1, .PBNum1
+{
+  width: 20px;
+  text-align:center;  
+}*/

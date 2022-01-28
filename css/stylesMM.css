@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* This CSS file will style properties specific to the PowerBall web page. */
+
+body {/*Same for all pages*/
+	background-color:#224189;/*Page dependant*/
+}
+#container {
+	background-image:url(../image/lottogradientPB2.jpg);/*Page dependant*/
+	background-color:#C5DFFF;
+	
+}
+#content{
+	background-image:url(../image/lottogradientPB3.jpg);/*Page dependant*/
+	background-color:#d2e6ff;
+}
+
+div 
+{
+/*height: auto;*/
+/*border: 1px solid ;	*/
+}
+a:link {color: blue; text-decoration: none;}
+form
+{
+/*height: auto;*/
+/*border: 1px solid green;	*/
+/*text-align:center;*/
+}
+
+.aLinks
+ {
+	background-color:#6787C2; /*Page dependant makes changes to style sheet to match*/
+	border: 2px inset blue;
+}
+.BonusNum1
+{
+	background-color:#F9DF3F;
+}
+#L5divTest{
+	
+	background-color:#6787C2;/*Page dependant*/
+	
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* This CSS file will style pages that  general information about a the web site. */
+
+body {/*Same for all pages*/
+	
+	background-color:#C6DDD3;/*Page dependant*/
+}
+#container {
+	background-image:url(../image/lottoG1.jpg);/*Page dependant*/
+	background-color:#D2E3DB;
+	background-repeat: repeat-x;
+}
+#content{
+	background-image:url(../image/lottoG1.jpg);/*Page dependant*/
+	background-color:#D2E3DB;
+	background-repeat: repeat-x;
+}
+
+#comments
+{
+	border: 2px solid black;
+}
